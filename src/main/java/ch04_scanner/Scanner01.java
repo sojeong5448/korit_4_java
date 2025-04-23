@@ -24,7 +24,7 @@ public class Scanner01 {
         System.out.println("년도 " + year);
         System.out.println("이름 " + name);
         /*
-            .nextLine() vs .next어쩌고() (Int, Double, ... etc)
+            nextLine() vs. next어쩌고() (Int, Double, ... etc)
             nextLine()은 띄어쓰기를 허용하고 enter키를 누른 것을 기준으로 (즉, 개행을 기준으로) 데이터를 대입함.
             반면 나머지는 띄어쓰기를 허용하지 않고 사용됨.
 
