@@ -6,6 +6,9 @@ public class Main {
         Computer computer1 = new Computer();
         LED led1 = new LED();
         Mouse mouse1 = new Mouse();
+        SmartPhone smartPhone1 = new SmartPhone();
+        Speaker speaker1 = new Speaker();
+        Tv tv1 = new Tv();
         CentralControl control1 = new CentralControl(new Power[5]);
         // 배열 생성 방법을 떠올려서 5개짜리 사이즈의 배열을 CentralControl() 생성자의
         // argument로 집어넣어보세요.
@@ -29,9 +32,24 @@ public class Main {
         control1.powerOn();
         control1.powerOff();
 
+        // SmartPhone, Speaker, Tv 객체를 각각 만들어서 순서대로 control1 객체의 필드인
+        // deviceArray에 집어넣으시오.
+        control1.addDevice(smartPhone1);
+        control1.addDevice(speaker1);
+        control1.addDevice(tv1);
 
+        // deviceArray에 연결된 제품들의 전원을 켜도록 코드를 작성하시오.
+        // tv1의 전원을 켜도록 코드를 작성하시오.
+//        control1.powerOn();
+        tv1.on();
 
-
+        // deviceArray에 연결된 제품들의 전원을 끄도록 코드를 작성하시오.
+        // tv1의 전원을 끄도록 코드를 작성하시오.
+//        control1.powerOff();
+        tv1.off();
+        control1.performSpecificMethod();
+        // tv1의 경우 control의 필드에 들어가 있지 않기 때문에
+        tv1.channelUp();
 
     }
 }
